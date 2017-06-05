@@ -86,9 +86,6 @@ def report(message, addr=None):
         else:
             # Submit IP for scanning if no report exists yet
             message.reply('{0} has been submitted for scanning, check back later.'.format(addr))
-
-
-
     else:
         message.reply('{0} is not a valid ip address'.format(addr))
 
@@ -116,8 +113,6 @@ def lookup(message, string=None):
 
     else:
         message.reply('Please enter a valid sha256 hash. Usage: @threatbot lookup <sha256>')
-
-
 
 
 @default_reply
