@@ -72,7 +72,7 @@ def report(message, addr=None):
         # Check against blacklists on VirusTotal
         headers = {
                 "Accept-Encoding": "gzip, deflate",
-                "User-Agent" : "gzip, My Python requests library example client or username"
+                "User-Agent" : "gzip"
                 }
 
         params = {'apikey': VT_API_KEY, 'resource':addr, 'scan':'1'}
@@ -97,7 +97,7 @@ def lookup(message, string=None):
         params = {'apikey': VT_API_KEY, 'resource':string}
         headers = {
                 "Accept-Encoding": "gzip, deflate",
-                "User-Agent" : "gzip, My Python requests library example client"
+                "User-Agent" : "gzip"
                 }
         response = requests.get('https://www.virustotal.com/vtapi/v2/file/report',
                 params=params, headers=headers)
